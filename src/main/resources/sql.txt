@@ -1,0 +1,28 @@
+create database pidata;
+
+drop database pidata;
+create database pidata CHARACTER SET utf8 COLLATE utf8_bin;
+
+create table pi
+(
+	IP nvarchar(20) null,
+	Count integer null,
+	CPU integer null,
+	CPU_Temp double null,
+	GPU_Temp double null,
+	Temperature double null,
+	SysTime timestamp null,
+	GpsTime timestamp null,
+	GPS_Latitude double null,
+	GPS_Longitude double null,
+	GPS_Satellite integer null,
+	Last_GPS_Latitude double null,
+	Last_GPS_Longitude double null,
+	Last_GPS_Satellite integer null,
+	Last_GPS_Seen timestamp null,
+	Located_Times integer null,
+	NodeName nvarchar(30) null
+);
+
+INSERT INTO pidata.pi (IP, Count, CPU, CPU_Temp, GPU_Temp, Temperature, SysTime, GpsTime, GPS_Latitude, GPS_Longitude, GPS_Satellite, Last_GPS_Latitude, Last_GPS_Longitude, Last_GPS_Satellite, Last_GPS_Seen, Located_Times, NodeName) VALUES (null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)
+INSERT INTO pidata.pi (IP, Count, CPU, CPU_Temp, GPU_Temp, Temperature, SysTime, GpsTime, GPS_Latitude, GPS_Longitude, GPS_Satellite, Last_GPS_Latitude, Last_GPS_Longitude, Last_GPS_Satellite, Last_GPS_Seen, Located_Times, NodeName) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
